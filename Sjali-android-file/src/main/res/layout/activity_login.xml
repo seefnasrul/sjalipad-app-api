@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/login_bg_gradient" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutIcon"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/rec_white_bg_with_shadow"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <com.pad.sjali.id.sjalipad.Utils.NoChangingBackgroundTextInputLayout
+            android:id="@+id/inputLayoutEmail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="10dp"
+            app:hintAnimationEnabled="false"
+            app:errorEnabled="true"
+            app:hintEnabled="false">
+            <EditText
+                android:padding="10dp"
+                android:background="@drawable/edittext_style"
+                android:id="@+id/inputEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_action_email"
+                android:hint="Email"
+                android:inputType="textEmailAddress" />
+
+        </com.pad.sjali.id.sjalipad.Utils.NoChangingBackgroundTextInputLayout>
+
+        <com.pad.sjali.id.sjalipad.Utils.NoChangingBackgroundTextInputLayout
+            android:id="@+id/inputLayoutPass"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:passwordToggleEnabled="true"
+            app:errorEnabled="true"
+            app:hintEnabled="false"
+            >
+            <EditText
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:background="@drawable/edittext_style"
+                android:id="@+id/inputPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword" />
+
+        </com.pad.sjali.id.sjalipad.Utils.NoChangingBackgroundTextInputLayout>
+
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rec_gradient"
+            android:text="Login"
+            android:textColor="#fff" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/txtQuestionNoAcc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have an account yet? " />
+
+            <TextView
+                android:id="@+id/linkRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/txtQuestionNoAcc"
+                android:text="Click to Register"
+                android:textColor="@color/colorAccentDark"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/layoutIcon"
+        android:layout_marginTop="50dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_centerHorizontal="true"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+</RelativeLayout>
